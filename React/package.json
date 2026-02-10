@@ -1,0 +1,92 @@
+{
+  "name": "courses-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@monaco-editor/react": "^4.6.0",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.5.2",
+    "@types/react": "^18.3.5",
+    "@types/react-dom": "^18.3.0",
+    "antd": "^5.20.3",
+    "clientjs": "^0.2.1",
+    "cross-env": "^7.0.3",
+    "mobx": "^6.13.6",
+    "mobx-react-lite": "^4.1.0",
+    "monaco-editor": "^0.52.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0",
+    "react-markdown": "^9.0.1",
+    "react-router-dom": "^6.26.2",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.5.0",
+    "rehype-raw": "^7.0.0",
+    "rehype-slug": "^6.0.0",
+    "rehype-stringify": "^10.0.0",
+    "remark": "^15.0.1",
+    "remark-flexible-toc": "^1.1.1",
+    "remark-gfm": "^4.0.0",
+    "remark-toc": "^9.0.0",
+    "swagger-typescript-api": "^13.0.22",
+    "typescript": "^4.9.5",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "vite",
+    "build": "vite build && npx vite-node sitemap-generator.ts",
+    "preview": "vite preview",
+    "lint": "eslint ./src",
+    "test": "vitest",
+    "ts-compile": "tsc --noEmit --watch",
+    "check packages": "depcheck",
+    "gen-sitemap": "npx vite-node sitemap-generator.ts",
+    "generate-api": "swagger-typescript-api -p http://localhost:5002/swagger/v1/swagger.json -o ./src/api -n Api.ts --disableStrictSSL --union-enums --templates ./src/api/templates",
+    "e2e:run-tests:ui": "cross-env URL=http://localhost:3001 npx playwright test --ui",
+    "e2e:run-tests:cmd": "cross-env URL=http://localhost:3001 npx playwright test",
+    "e2e:codegen": "npx playwright codegen localhost:3001 --viewport-size=\"1920,1080\""
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@eslint/css": "^0.10.0",
+    "@eslint/js": "^9.33.0",
+    "@eslint/json": "^0.13.1",
+    "@eslint/markdown": "^7.1.0",
+    "@playwright/test": "^1.51.1",
+    "@types/clientjs": "^0.2.2",
+    "@types/node": "^22.14.0",
+    "@types/react-helmet": "^6.1.11",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "@vitejs/plugin-react": "^4.3.2",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
+    "jiti": "^2.5.1",
+    "prettier": "3.3.3",
+    "rollup-plugin-visualizer": "^6.0.3",
+    "ts-node": "^10.9.2",
+    "typescript-eslint": "^8.39.1",
+    "vite": "^5.4.8",
+    "vitest": "^3.1.2"
+  }
+}

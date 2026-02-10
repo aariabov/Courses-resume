@@ -1,0 +1,19 @@
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.ant-anchor::before {
+  inset-inline-end: 0;
+  inset-inline-start: unset !important;
+}
+
+.ant-anchor {
+  padding-right: 16px !important;
+  margin-left: -16px !important;
+}
+
+.ant-anchor-ink {
+  inset-inline-end: 0;
+  inset-inline-start: unset !important;
+}

@@ -1,0 +1,32 @@
+.terminal-output {
+  white-space: pre;
+  font-family: monospace;
+  line-height: 19px;
+}
+
+.terminal-input {
+  border: none;
+  outline: none;
+  font-family: monospace;
+  flex: 1;
+  font-size: 16px;
+  padding: 0;
+}
+
+.terminal-prompt {
+  white-space: pre;
+  height: 19px;
+  line-height: 19px;
+  font-family: monospace;
+}
+
+.terminal-line {
+  display: flex;
+  align-items: center;
+}
+
+.terminal-input-wrapper {
+  display: flex;
+  position: relative;
+  flex: 1;
+}
